@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang='ko'>
     <head>
@@ -7,15 +9,19 @@
     </head>
     <body>
         <div class="container">
-            <form action="/url" method="GET">
+            <form action="/url/originURL" method="GET">
                 <div class="mb-3">
                     <label for="originalURL" class="form-lable">단축 시킬 주소</label>
-                    <input type="text" class="form-control" name="origin" id="origin" placeholder="Paste a link to shorten it">
+                    <input type="text" class="form-control" name="originURL" id="origin" placeholder="Paste a link to shorten it">
                 </div>
                 <div class="col-auto">
-                    <button type="submit" class="btn btn-primary mb-3">Shorten it</button>
-                  </div>
+                    <button type="submit" class="btn btn-primary mb-3">챱챱</button>
+                </div>
             </form>
+            <div class="col-auto">
+                <label for="shortURL" class="form-lable">단축된 주소</label>
+                <input class="form-control" name="shortURL" id="shortURL" value="${shortURL}" readonly>
+            </div>
         </div>
     </body>
 </html>
